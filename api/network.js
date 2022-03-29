@@ -1,5 +1,5 @@
 const axios = require("axios");
-let { handleHref, wait } = require("./utils");
+let { handleHref } = require("./utils");
 
 async function Request(api) {
   let page = 1;
@@ -20,7 +20,6 @@ async function Request(api) {
       } else {
         page += 1;
         endID = resArr[resArr.length - 1].id;
-        await wait(200);
       }
     }
   }

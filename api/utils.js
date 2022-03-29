@@ -17,13 +17,7 @@ function handleHref(href, page, endID, size) {
   return href;
 }
 
-// 延迟函数
-function wait(ms = 100) {
-  return new Promise((resolve) => setTimeout(() => resolve(), ms));
-}
-
 module.exports = {
   decoding,
   handleHref,
-  wait,
 };
