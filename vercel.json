@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "./index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "headers": {
+        "cache-control": "no-cache, no-store, must-revalidate",
+        "Access-Control-Allow-Origin": "https://awesome404.gitee.io",
+        "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Methods": "POST"
+      },
+      "dest": "/"
+    }
+  ]
+}
