@@ -25,17 +25,17 @@ async function NetWork(api, type) {
 }
 
 // UP池
-Router.post("/query_301", async (req, res) => {
+Router.post("/query_301", (req, res) => {
   NetWork.call(res, req.body.api, "up");
 });
 
 // 武器池
-Router.post("/query_302", async (req, res) => {
+Router.post("/query_302", (req, res) => {
   NetWork.call(res, req.body.api, "weapon");
 });
 
 // 常驻池
-Router.post("/query_200", async (req, res) => {
+Router.post("/query_200", (req, res) => {
   NetWork.call(res, req.body.api, "forever");
 });
 

@@ -10,9 +10,9 @@ async function Request(api) {
 
   while (bool) {
     let handleAPI = handleHref(api, page, endID, size);
-    let res = await axios.get(handleAPI);
-    if (res.data.message == "OK") {
-      let resArr = res.data.data.list;
+    let { data } = await axios.get(handleAPI);
+    if (data.message == "OK") {
+      let resArr = data.data.list;
       result.push(...resArr);
 
       if (resArr.length < size) {
