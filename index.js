@@ -1,11 +1,7 @@
 let express = require("express");
 let app = express();
 let cors = require("cors");
-let timeout = require("connect-timeout");
 let api = require("./api");
-
-// 配置超时时间
-app.use(timeout("20s"));
 
 // 配置 POST
 app.use(express.json());

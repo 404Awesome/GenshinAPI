@@ -1,11 +1,3 @@
-// 处理 base64编码问题
-function decoding(data) {
-  if (data) {
-    let res = Buffer.from(data, "base64").toString("utf8");
-    return res;
-  }
-}
-
 // 处理请求链接
 function handleHref(href, page, endID, size) {
   // 修改 page
@@ -18,6 +10,5 @@ function handleHref(href, page, endID, size) {
 }
 
 module.exports = {
-  decoding,
-  handleHref,
+  handleHref
 };
